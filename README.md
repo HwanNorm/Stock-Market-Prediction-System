@@ -95,13 +95,13 @@ Raw Data (ZIP files) → CSV Extraction → Feature Engineering → Normalizatio
 
 ### NASDAQ Market Analysis
 
-![AAPL 1-Day Prediction](Image1)
+![AAPL 1-Day Prediction](images/nasdaq/aapl_1day_prediction.png)
 *Figure 1: AAPL stock price prediction showing excellent model accuracy (MSE: 0.0119) with predicted vs actual prices closely aligned*
 
-![AAPL 25-Day Prediction](Image2)
+![AAPL 25-Day Prediction](images/nasdaq/aapl_25day_prediction.png)
 *Figure 2: 25-day ahead prediction demonstrating model's ability to capture long-term trends despite increased MSE (0.776)*
 
-![AAPL Multi-Day Prediction](Image3)
+![AAPL Multi-Day Prediction](images/nasdaq/aapl_consecutive_25days.png)
 *Figure 3: Consecutive 25-day prediction showing model's capability to forecast multiple time horizons simultaneously*
 
 - **Model Performance**: Achieved excellent convergence with MSE dropping from 0.257 to 0.0114
@@ -110,16 +110,16 @@ Raw Data (ZIP files) → CSV Extraction → Feature Engineering → Normalizatio
 
 ### Vietnamese Market Analysis
 
-![HPG 1-Day Prediction](Image4)
+![HPG 1-Day Prediction](images/vietnam/hpg_1day_prediction.png)
 *Figure 4: HPG (Hoa Phat Group) 1-day prediction showing strong performance in Vietnamese market*
 
-![HPG 7-Day Prediction](Image5)
+![HPG 7-Day Prediction](images/vietnam/hpg_7day_prediction.png)
 *Figure 5: HPG 7-day ahead prediction demonstrating model adaptation to Vietnamese market characteristics*
 
-![HPG Multi-Day Analysis](Image6)
+![HPG Multi-Day Analysis](images/vietnam/hpg_consecutive_7days_detailed.png)
 *Figure 6: Detailed 7-day consecutive prediction analysis for HPG stock*
 
-![HPG Combined Prediction](Image7)
+![HPG Combined Prediction](images/vietnam/hpg_combined_7days.png)
 *Figure 7: Comprehensive view of all 7-day predictions showing model consistency across different time horizons*
 
 - **Market Coverage**: HOSE, HNX, UPCOM exchanges
@@ -128,16 +128,16 @@ Raw Data (ZIP files) → CSV Extraction → Feature Engineering → Normalizatio
 
 ### Trading Signal Performance
 
-![Buy Signals](Image8)
+![Buy Signals](images/trading_signals/buy_signals_detection.png)
 *Figure 8: Buy signal detection system identifying optimal entry points (51 signals detected with 70% accuracy)*
 
-![Buy Signal Analysis](Image9)
+![Buy Signal Analysis](images/trading_signals/buy_signal_analysis_detailed.png)
 *Figure 9: Detailed buy signal analysis for specific trading date showing decision-making process*
 
-![Sell Signals](Image10)
+![Sell Signals](images/trading_signals/sell_signals_detection.png)
 *Figure 10: Sell signal detection system identifying optimal exit points (58 signals detected with 65% accuracy)*
 
-![Sell Signal Analysis](Image11)
+![Sell Signal Analysis](images/trading_signals/sell_signal_analysis_detailed.png)
 *Figure 11: Detailed sell signal analysis demonstrating risk management capabilities*
 
 #### Buy Signal Results
@@ -277,18 +277,6 @@ model = Sequential([
 - **Optimization**: SciPy optimization for portfolio allocation
 - **Visualization**: Matplotlib for analysis and results presentation
 - **Data Management**: ZIP file handling, multi-format CSV processing
-
-## 📁 Project Structure
-
-```
-├── nasdaq_predicts.py          # NASDAQ market implementation
-├── vn_stocks_predict.py        # Vietnamese market implementation
-├── portfolio_optimization.csv   # Final portfolio results
-├── risk_assessment.csv         # Risk analysis results
-├── Cell output for Nasdaq code.pdf      # NASDAQ results
-├── Cell output for VN stock market.pdf  # Vietnam results
-└── Final Project Report.docx   # Comprehensive project documentation
-```
 
 ## 🚀 How to Run
 
