@@ -94,20 +94,51 @@ Raw Data (ZIP files) → CSV Extraction → Feature Engineering → Normalizatio
 ## 📈 Key Findings & Results
 
 ### NASDAQ Market Analysis
-![NASDAQ Training Progress](https://via.placeholder.com/800x400/4CAF50/FFFFFF?text=NASDAQ+Model+Training+Loss+Over+Epochs)
+
+![AAPL 1-Day Prediction](Image1)
+*Figure 1: AAPL stock price prediction showing excellent model accuracy (MSE: 0.0119) with predicted vs actual prices closely aligned*
+
+![AAPL 25-Day Prediction](Image2)
+*Figure 2: 25-day ahead prediction demonstrating model's ability to capture long-term trends despite increased MSE (0.776)*
+
+![AAPL Multi-Day Prediction](Image3)
+*Figure 3: Consecutive 25-day prediction showing model's capability to forecast multiple time horizons simultaneously*
 
 - **Model Performance**: Achieved excellent convergence with MSE dropping from 0.257 to 0.0114
 - **Companies Filtered**: 1,564 → 115 companies meeting quality criteria
 - **Sector Focus**: Technology sector (AAPL) with peers NVDA, MSFT, AMD
 
 ### Vietnamese Market Analysis
-![Vietnam Market Results](https://via.placeholder.com/800x400/2196F3/FFFFFF?text=Vietnamese+Market+Prediction+Results)
+
+![HPG 1-Day Prediction](Image4)
+*Figure 4: HPG (Hoa Phat Group) 1-day prediction showing strong performance in Vietnamese market*
+
+![HPG 7-Day Prediction](Image5)
+*Figure 5: HPG 7-day ahead prediction demonstrating model adaptation to Vietnamese market characteristics*
+
+![HPG Multi-Day Analysis](Image6)
+*Figure 6: Detailed 7-day consecutive prediction analysis for HPG stock*
+
+![HPG Combined Prediction](Image7)
+*Figure 7: Comprehensive view of all 7-day predictions showing model consistency across different time horizons*
 
 - **Market Coverage**: HOSE, HNX, UPCOM exchanges
 - **Unique Challenges**: Different market structure, trading patterns, and volatility
 - **Performance**: Comparable accuracy to NASDAQ with market-specific adaptations
 
 ### Trading Signal Performance
+
+![Buy Signals](Image8)
+*Figure 8: Buy signal detection system identifying optimal entry points (51 signals detected with 70% accuracy)*
+
+![Buy Signal Analysis](Image9)
+*Figure 9: Detailed buy signal analysis for specific trading date showing decision-making process*
+
+![Sell Signals](Image10)
+*Figure 10: Sell signal detection system identifying optimal exit points (58 signals detected with 65% accuracy)*
+
+![Sell Signal Analysis](Image11)
+*Figure 11: Detailed sell signal analysis demonstrating risk management capabilities*
 
 #### Buy Signal Results
 ```
@@ -125,22 +156,77 @@ Raw Data (ZIP files) → CSV Extraction → Feature Engineering → Normalizatio
 📊 Total Signals Detected: 58
 ```
 
-### Portfolio Optimization Results
+## 🏆 Portfolio Analysis & Optimization Results
 
-**Final Portfolio Allocation** (Top Holdings):
-| Company | Ticker | Allocation | Expected Return | Risk Level |
-|---------|--------|------------|-----------------|------------|
-| MB Bank | MBB | 10.00% | 20.14% | 29.30% |
-| Hoa Phat Group | HPG | 7.89% | 20.11% | 36.68% |
-| VPBank | VPB | 6.99% | 18.98% | 37.87% |
-| LienVietPostBank | LPB | 6.61% | 22.00% | 41.86% |
-| TPBank | TPB | 6.40% | 14.80% | 35.05% |
+### Top 20 Most Profitable Companies
 
-**Portfolio Statistics**:
+**Comprehensive Analysis Results:**
+```
+    ticker  last_price  return_30d  volatility  total_score
+265    HPG     20000.0   -0.990099    3.118964     0.694258
+268    HSG     14550.0   11.068702    5.408786     0.608811
+719    VND     13450.0   -8.813559    6.198551     0.590374
+563    STB     23750.0   -3.846154    4.156955     0.582642
+732    VPB     17050.0   -7.588076    5.169642     0.580750
+560    SSI     18250.0   -5.440415    4.382911     0.558086
+529    SHB      9790.0   -7.203791    4.182587     0.550777
+450    PPS     11500.0    8.490566    3.611194     0.550373
+476    POW     12100.0    3.862661    2.035985     0.534296
+477    PVS     26000.0   13.537118    4.608588     0.529722
+```
+
+**Key Insights:**
+- **HPG (Hoa Phat Group)** leads with highest total score (0.694)
+- **Balanced Risk-Return**: Selected companies show optimal risk-adjusted returns
+- **Diversification**: Portfolio spans multiple sectors and market caps
+
+### Risk Management Analysis
+
+**Top 20 Riskiest Companies (Excluded from Portfolio):**
+```
+    ticker  last_price  price_volatility  max_drawdown  debt_to_equity  total_risk_score
+333    LBE     20000.0         32.432348     49.695122             0.1          0.615161
+283    IBC      2670.0         50.356514     78.348624             0.4          0.606658
+331    LAF     15400.0          6.425533     20.972644             4.0          0.598500
+745    VTL     13800.0          5.116561      9.803922             2.8          0.597925
+642    TSB     34400.0         50.489317     26.495726             2.3          0.591531
+```
+
+**Risk Assessment Criteria:**
+- **Price Volatility**: High standard deviation indicates unstable pricing
+- **Maximum Drawdown**: Largest peak-to-trough decline in value
+- **Debt-to-Equity**: Financial leverage indicating company stability
+- **Total Risk Score**: Composite metric for comprehensive risk evaluation
+
+### Final Optimized Portfolio
+
+**Portfolio Allocation Results:**
+```
+   ticker  allocation  expected_return  risk
+16    MBB       10.00            20.14 29.30
+0     HPG        7.89            20.11 36.68
+4     VPB        6.99            18.98 37.87
+11    LPB        6.61            22.00 41.86
+14    TPB        6.40            14.80 35.05
+1     HSG        5.77            22.81 45.63
+2     VND        5.74            22.58 45.52
+17    VCC        5.45            24.95 49.08
+7     PPS        5.41            19.54 43.68
+6     SHB        5.34            17.50 41.65
+```
+
+**Portfolio Performance Metrics:**
 - 📈 **Expected Annual Return**: 18.90%
-- 📉 **Annual Risk**: 9.89%
+- 📉 **Annual Risk (Volatility)**: 9.89%
 - ⚡ **Sharpe Ratio**: 1.91
 - 🏢 **Total Companies**: 18 selected from 98 candidates
+- 💰 **Risk-Adjusted Performance**: Excellent balance of return vs risk
+
+**Key Portfolio Insights:**
+- **Diversified Holdings**: No single company exceeds 10% allocation
+- **Banking Sector Leadership**: MBB, VPB, LPB, TPB represent strong financial institutions
+- **Industrial Balance**: HPG provides manufacturing sector exposure
+- **Optimal Risk Distribution**: Maximum individual company risk capped at 58.51%
 
 ## 🔍 Technical Implementation
 
@@ -178,7 +264,10 @@ model = Sequential([
 ### 3. **Prediction Horizon Trade-offs**
 > ⏱️ **Accuracy vs Time**: 1-day predictions achieve MSE of 0.0119, while 25-day predictions degrade to 0.776 - demonstrating the market efficiency principle.
 
-### 4. **Simplicity vs Complexity**
+### 4. **Portfolio Optimization Success**
+> 📊 **Risk-Return Balance**: Achieved 18.90% expected returns with only 9.89% volatility, resulting in excellent Sharpe ratio of 1.91.
+
+### 5. **Simplicity vs Complexity**
 > 🎲 **Unexpected Result**: Simpler portfolio selection criteria outperformed complex multi-factor models, achieving better real-world alignment.
 
 ## 🛠️ Technologies Used
@@ -188,6 +277,18 @@ model = Sequential([
 - **Optimization**: SciPy optimization for portfolio allocation
 - **Visualization**: Matplotlib for analysis and results presentation
 - **Data Management**: ZIP file handling, multi-format CSV processing
+
+## 📁 Project Structure
+
+```
+├── nasdaq_predicts.py          # NASDAQ market implementation
+├── vn_stocks_predict.py        # Vietnamese market implementation
+├── portfolio_optimization.csv   # Final portfolio results
+├── risk_assessment.csv         # Risk analysis results
+├── Cell output for Nasdaq code.pdf      # NASDAQ results
+├── Cell output for VN stock market.pdf  # Vietnam results
+└── Final Project Report.docx   # Comprehensive project documentation
+```
 
 ## 🚀 How to Run
 
@@ -207,34 +308,6 @@ python nasdaq_predicts.py
 # Load and run Vietnamese market system
 python vn_stocks_predict.py
 ```
-
-## 📊 Performance Visualization
-
-### Model Training Progress
-The LSTM models demonstrated excellent convergence across both markets:
-
-**NASDAQ Training Evolution**:
-- Epoch 1: Loss 0.257 → Validation Loss 0.047
-- Epoch 26: Loss 0.008 → Validation Loss 0.011 (Best Model)
-- Final Performance: Test MSE 0.0119
-
-**Vietnamese Market Training**:
-- Rapid convergence within 30 epochs
-- Stable validation performance
-- Consistent cross-market results
-
-### Trading Signal Effectiveness
-
-**Buy Signal Performance**:
-- 51 buy signals generated during test period
-- Average predicted price at signals: 23,370 VND
-- Average actual price at signals: 23,637 VND
-- Signal accuracy maintained across different market conditions
-
-**Sell Signal Performance**:
-- 58 sell signals generated during test period
-- Effective loss prevention in 80% of cases
-- Average loss avoided: 6.2% per signal
 
 ## 🎯 Business Impact
 
