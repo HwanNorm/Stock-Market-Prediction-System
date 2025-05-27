@@ -189,18 +189,6 @@ model = Sequential([
 - **Visualization**: Matplotlib for analysis and results presentation
 - **Data Management**: ZIP file handling, multi-format CSV processing
 
-## 📁 Project Structure
-
-```
-├── nasdaq_predicts.py          # NASDAQ market implementation
-├── vn_stocks_predict.py        # Vietnamese market implementation
-├── portfolio_optimization.csv   # Final portfolio results
-├── risk_assessment.csv         # Risk analysis results
-├── Cell output for Nasdaq code.pdf      # NASDAQ results
-├── Cell output for VN stock market.pdf  # Vietnam results
-└── Final Project Report.docx   # Comprehensive project documentation
-```
-
 ## 🚀 How to Run
 
 ### Prerequisites
