@@ -326,18 +326,7 @@ python vn_stocks_predict.py
 - [ ] **Performance Optimization**: GPU acceleration for faster training
 - [ ] **Risk Models**: Advanced VaR and stress testing implementations
 
-## 📚 Academic Context
-
-This project was developed as part of the **CS313 Deep Learning for Artificial Intelligence** course (Fall 2024), representing a comprehensive application of deep learning techniques to financial markets. The implementation demonstrates practical skills in:
-
-- Time series analysis and forecasting
-- Deep learning model architecture design
-- Financial risk management principles
-- Cross-market comparative analysis
-- Production-ready system development
-
 ---
 
 **🎓 Author**: Pham Hoang Nam  
-**📧 Course**: CS313 Deep Learning for Artificial Intelligence - Fall 2024  
 **⭐ Star this repository if you found it helpful!**
