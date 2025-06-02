@@ -31,8 +31,8 @@ This project uses AI to:
 This project shows how to work with enterprise-level financial data:
 
 **📊 Data Size:**
-- **US Market**: 1,564 companies, 841 MB of financial data
-- **Vietnamese Market**: Multiple exchanges with years of trading history
+- **US Market**: 1,564 companies
+- **Vietnamese Market**: 1,628 companies
 - **Processing Challenge**: Thousands of CSV files with millions of data points
 
 **⚡ How This Solves Big Data Problems:**
