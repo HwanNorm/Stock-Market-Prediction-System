@@ -109,10 +109,10 @@ Raw Data → Extract Files → Clean Data → Normalize → Feed to AI Model
 ### Trading Signal Performance
 
 ![Buy Signals](images/trading_signals/buy_signals_detection.png)
-*AI identifying 51 good buying opportunities with 70% success rate*
+*AI identifying 51 good buying opportunities*
 
 ![Sell Signals](images/trading_signals/sell_signals_detection.png)
-*AI spotting 58 selling opportunities with 65% success rate*
+*AI spotting 58 selling opportunitie*
 
 #### Buy Signal Results
 ```
